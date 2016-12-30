@@ -29,7 +29,13 @@ function createWindow () {
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools()
+  /*
+   * Open dev tools after window is shown
+   */
 
+  if (process.env.NODE_ENV === 'development') {
+      mainWindow.openDevTools();
+  }
 
   // Show the mainwindow when it is loaded and ready to show
   mainWindow.once('ready-to-show', () => {
