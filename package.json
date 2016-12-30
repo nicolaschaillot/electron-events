@@ -1,11 +1,11 @@
 {
-  "name": "electron-tutorial-app",
-  "productName": "Electron tutorial app",
-  "description": "Application for electron tutorials",
+  "name": "keendoo-events",
+  "productName": "Electron Keendoo events app",
+  "description": "Application for Keendoo events display",
   "version": "0.1.0",
   "main": "main.js",
   "license": "MIT",
-  "author": "Christian Engvall",
+  "author": "Nicolas Chaillot",
   "devDependencies": {
     "electron": "^1.4.5",
     "electron-installer-dmg": "^0.1.2",
@@ -14,7 +14,7 @@
   },
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/crilleengvall/electron-tutorial-app.git"
+    "url" : "https://github.com/nicolaschaillot/electron-events.git"
   },
   "scripts": {
     "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
