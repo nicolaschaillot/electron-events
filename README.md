@@ -3,6 +3,7 @@
 ## Resources
 * https://github.com/bmathews/menubar-calendar
 * https://github.com/crilleengvall/electron-tutorial-app
+* https://github.com/Ivshti/linvodb3
 
 ## Statics
 * SyncService.POLL_INTERVAL : fréquence de refresh (en ms) ==> 900000

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export default {
 
   getDaysInMonth(d) {
@@ -197,7 +199,7 @@ export default {
   formatTime(date, format) {
     let hours = date.getHours();
     let mins = date.getMinutes().toString();
-console.log("date = " + date + " - Format = " + format);
+
     if (format === 'ampm') {
       const isAM = hours < 12;
       const additional = isAM ? ' AM' : ' PM';
@@ -224,7 +226,7 @@ console.log("date = " + date + " - Format = " + format);
         prefix = 'Tomorrow';
       }
     }
-
-    return `${prefix} ${date.getMonth() + 1}/${date.getDate()}/${String(date.getFullYear()).substr(2)}`;
+    const formattedDate = moment(date).format('DD/MM/YYYY');
+    return `${prefix} ${formattedDate}`;
   }
 };
