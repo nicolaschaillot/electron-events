@@ -25,11 +25,11 @@ export default class extends EventEmitter {
 
   async getEvents() {
     const start = new Date();
-    start.setDate(start.getDate() - 30);
+    start.setDate(start.getDate() - 0);
     start.setHours(0);
     start.setMinutes(0);
     const end = new Date();
-    end.setDate(end.getDate() + 30);
+    end.setDate(end.getDate() + 100);
 
     console.log('Sync: #tick: Now pulling all from store');
 

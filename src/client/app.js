@@ -84,18 +84,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="flex-column">
-        <div className="menu-icon" onClick={this._handleMenuClick}>
-          <Icon icon="menu" />
-        </div>
-        <Calendar
-          ref="calendar"
-          key="calendar"
-          view={this.state.view}
-          events={this.state.events}
-          selectedDate={new Date()}
-          onChange={this._handleCalendarSelect}
-        />
+      <div className="flex-column wrapper style1 fullscreen intro">
         <EventList
           ref="eventlist"
           key="events"

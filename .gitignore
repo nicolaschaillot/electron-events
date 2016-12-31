@@ -13,6 +13,7 @@ npm-debug.log
 # Secrets #
 ###########
 secrets.json
+events.db
 
 # IDE *
 #######

@@ -135,7 +135,7 @@ class EventList extends React.Component {
   render() {
     const items = _.map(this.state.groupedEvents, (subItems, key) => {
       const header = (
-        <div ref={key} className="event-list-header" onMouseDown={this._handleHeaderClick}>{key}</div>
+        <div ref={key} className="event-list-header">{key}</div>
       );
       const els = subItems.map((e, i) => (
         this._renderEvent(e, i, key)

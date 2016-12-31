@@ -30,7 +30,7 @@ class Event extends React.Component {
   }
 
   _renderAttendees(attendees) {
-    console.log(attendees);
+    // console.log(attendees);
     if (attendees) {
       const filtered = attendees.filter(a => a.responseStatus === 'accepted');
       const circles = filtered.slice(0, 3).map((a, i) => (
@@ -77,7 +77,7 @@ class Event extends React.Component {
     });
 
     return (
-      <div onMouseDown={this._handleEventClick} className={eventClasses}>
+      <div className={eventClasses}>
         <div className="name">
           {event.summary || '(No title)'}
           <div className="location">
