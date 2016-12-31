@@ -390,9 +390,9 @@ button, .button {
 .event-list-header {
   margin-top: 12px;
   padding: 4px 12px 0px 12px;
-  color: #888888;
+  color: #395873;
   font-family: ".SFNSDisplay-Medium", "Helvetica Neue", sans-serif;
-  font-size: 12px;
+  font-size: 0.9em;
 }
 
 .event {
@@ -433,6 +433,8 @@ button, .button {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .event .location {

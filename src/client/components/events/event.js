@@ -20,11 +20,11 @@ class Event extends React.Component {
   _getTimeRange(start, end) {
     if (timeUtils.areSameDay(start, end)) {
       // same day, format normally
-      return `${timeUtils.formatTime(start, 'ampm')} - ${timeUtils.formatTime(end, 'ampm')}`;
+      return `${timeUtils.formatTime(start, '')} - ${timeUtils.formatTime(end, '')}`;
     } else if (timeUtils.areSameDay(start, this.props.date)) {
-      return `Starts at ${timeUtils.formatTime(start, 'ampm')}`;
+      return `Starts at ${timeUtils.formatTime(start, '')}`;
     } else if (timeUtils.areSameDay(end, this.props.date)) {
-      return `Ends at ${timeUtils.formatTime(end, 'ampm')}`;
+      return `Ends at ${timeUtils.formatTime(end, '')}`;
     }
     return 'All day';
   }

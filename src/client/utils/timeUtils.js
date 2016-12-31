@@ -66,13 +66,13 @@ export default {
   getFullDayOfWeek(day) {
     switch (day) {
       default: return 'Unknown';
-      case 0: return 'Sunday';
-      case 1: return 'Monday';
-      case 2: return 'Tuesday';
-      case 3: return 'Wednesday';
-      case 4: return 'Thursday';
-      case 5: return 'Friday';
-      case 6: return 'Saturday';
+      case 0: return 'Dimanche';
+      case 1: return 'Lundi';
+      case 2: return 'Mardi';
+      case 3: return 'Mercredi';
+      case 4: return 'Jeudi';
+      case 5: return 'Vendredi';
+      case 6: return 'Samedi';
     }
   },
 
@@ -197,7 +197,7 @@ export default {
   formatTime(date, format) {
     let hours = date.getHours();
     let mins = date.getMinutes().toString();
-
+console.log("date = " + date + " - Format = " + format);
     if (format === 'ampm') {
       const isAM = hours < 12;
       const additional = isAM ? ' AM' : ' PM';
