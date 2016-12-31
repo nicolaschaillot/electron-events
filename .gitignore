@@ -15,6 +15,10 @@ npm-debug.log
 secrets.json
 events.db
 
+# Builds results #
+##################
+release-builds
+
 # IDE *
 #######
 /.idea/
