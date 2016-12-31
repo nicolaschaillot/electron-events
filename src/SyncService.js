@@ -8,7 +8,7 @@ const conf = new Configstore('keendoo-events');
 
 import EventEmitter from 'events';
 
-const POLL_INTERVAL = 30000;
+const POLL_INTERVAL = 900000;
 const EVENTS_MAX_NUMBER = 6;
 
 export default class extends EventEmitter {
