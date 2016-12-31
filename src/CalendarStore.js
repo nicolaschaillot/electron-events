@@ -40,7 +40,7 @@ class CalendarStore {
    * Get all items between start/end time range
    */
 
-  getByDate(start, end) {
+  getByDate(start, end, limit) {
     return new Promise((resolve, reject) => {
       Events.find({
         $or: [{
@@ -54,7 +54,7 @@ class CalendarStore {
             $lte: end
           }
         }]
-      }).exec((err, res) => {
+      }).limit(limit).exec((err, res) => {
         if (err) return reject(err);
         return resolve(res);
       });

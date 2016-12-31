@@ -9,6 +9,7 @@ const conf = new Configstore('keendoo-events');
 import EventEmitter from 'events';
 
 const POLL_INTERVAL = 30000;
+const EVENTS_MAX_NUMBER = 6;
 
 export default class extends EventEmitter {
 
@@ -31,9 +32,9 @@ export default class extends EventEmitter {
     const end = new Date();
     end.setDate(end.getDate() + 100);
 
-    console.log('Sync: #tick: Now pulling all from store');
+    console.log('Sync: #tick: Now pulling all from store' + " - Start date : " + start.toISOString() + " - End date : " + end.toISOString());
 
-    const events = await store.getByDate(start.toISOString(), end.toISOString());
+    const events = await store.getByDate(start.toISOString(), end.toISOString(), EVENTS_MAX_NUMBER);
 
     console.log('Sync: #tick: Update done, firing update:', events.length);
 

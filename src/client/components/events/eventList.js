@@ -146,8 +146,9 @@ class EventList extends React.Component {
           <div className="event empty">No events today!</div>
         );
       }
-
-      return [header].concat(els);
+      if(els.length) {
+        return [header].concat(els);
+      }
     });
 
     return (

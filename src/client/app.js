@@ -84,7 +84,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="flex-column wrapper style1 fullscreen intro">
+      <div className="wrapper style1 fullscreen intro">
         <EventList
           ref="eventlist"
           key="events"
