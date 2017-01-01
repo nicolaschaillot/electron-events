@@ -1,2 +1,2 @@
 const rimraf = require('rimraf');
-rimraf.sync('events.db', {});
+rimraf.sync('tmp/events.db', {});
