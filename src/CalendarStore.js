@@ -1,8 +1,10 @@
 import Q from 'q';
 import LinvoDB from 'linvodb3';
 import medeadown from 'medeadown';
+
 LinvoDB.defaults.store = { db: medeadown };
-LinvoDB.dbPath = process.cwd();
+// LinvoDB.dbPath = process.cwd();
+LinvoDB.dbPath = './tmp';
 
 const Events = new LinvoDB('events', {});
 

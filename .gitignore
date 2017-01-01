@@ -13,7 +13,8 @@ npm-debug.log
 # Secrets #
 ###########
 secrets.json
-events.db
+# events.db
+db
 
 # Builds results #
 ##################
