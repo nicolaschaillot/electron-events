@@ -82,6 +82,14 @@ button:disabled, .button:disabled {
   pointer-events: none;
 }
 
+#my-header {
+  /* background-image: url('../img/keendoo.png'); */
+  background-position: right;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
 .menu-icon {
   position: absolute;
   top: 28px;

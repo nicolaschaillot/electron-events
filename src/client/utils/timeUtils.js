@@ -221,9 +221,9 @@ export default {
     let prefix = this.getFullDayOfWeek(date.getDay());
     if (date.getFullYear() === today.getFullYear() && date.getMonth() === today.getMonth()) {
       if (date.getDate() === today.getDate()) {
-        prefix = 'Today';
+        prefix = 'Aujourd\'hui';
       } else if (date.getDate() - 1 === today.getDate()) {
-        prefix = 'Tomorrow';
+        prefix = 'Demain';
       }
     }
     const formattedDate = moment(date).format('DD/MM/YYYY');

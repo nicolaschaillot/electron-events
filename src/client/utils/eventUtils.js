@@ -1,4 +1,5 @@
 import timeUtils from './timeUtils';
+import moment from 'moment';
 
 export default {
 
@@ -79,9 +80,8 @@ export default {
 
     events.forEach(e => {
       const dates = this.getDatesForEvent(e);
-
       dates.forEach(d => {
-        const format = d.toISOString().substr(0, 10);
+        const format = moment(d).format('YYYY-MM-DD');
         if (!groups[format]) {
           groups[format] = [e];
         } else {
