@@ -1,7 +1,7 @@
 {
-  "name": "LastEventsApp",
-  "productName": "Last events app",
-  "description": "Last events app",
+  "name": "KeendooNext",
+  "productName": "KeendooNext",
+  "description": "Keendoo next events app",
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
@@ -39,7 +39,7 @@
     "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=src/client/assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/client/assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Last events app\"",
     "package-linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=src/client/assets/icons/png/1024x1024.png --prune=true --out=release-builds",
-    "create-installer-mac": "electron-installer-dmg ./release-builds/Last\\ events\\ app-darwin-x64/Last\\ events\\ app.app last-events-app --out=release-builds --overwrite --icon=src/client/assets/icons/mac/icon.icns",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/KeendooNext-darwin-x64/KeendooNext.app last-events-app --out=release-builds --overwrite --icon=src/client/assets/icons/mac/icon.icns",
     "create-installer-win": "node installers/windows/createinstaller.js"
   },
   "dependencies": {
