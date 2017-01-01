@@ -1,4 +1,28 @@
-.DS_STORE
-.sass-cache
+# OS generated files #
+######################
+.DS_Store
+
+# Dependency directory #
+########################
 node_modules
+
+# Debug log from npm #
+######################
+npm-debug.log
+
+# Secrets #
+###########
+secrets.json
+# events.db
+tmp
+
+# Builds results #
+##################
 release-builds
+
+# IDE *
+#######
+/.idea/
+*.iml
+
+.sass-cache
