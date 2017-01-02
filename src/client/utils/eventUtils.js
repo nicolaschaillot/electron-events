@@ -82,6 +82,7 @@ export default {
       const dates = this.getDatesForEvent(e);
       dates.forEach(d => {
         const format = moment(d).format('YYYY-MM-DD');
+        // const format = d.toISOString().substr(0, 10);
         if (!groups[format]) {
           groups[format] = [e];
         } else {

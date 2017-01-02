@@ -17,7 +17,14 @@ body, html {
 }
 
 body {
-  padding-top: 10px;
+  /* padding-top: 10px; */
+}
+
+#footer {
+  height: 30px;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 4px;
 }
 
 #react-root {
@@ -53,6 +60,10 @@ body {
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0 0 8px 20px;
   line-height: 1.4;
+}
+
+#my-header h1 {
+  font-size: 5em;
 }
 
 p:last-child {
@@ -396,11 +407,12 @@ button, .button {
 }
 
 .event-list-header {
-  margin-top: 12px;
+  margin-top: 70px;
   padding: 4px 12px 0px 12px;
-  color: #395873;
+  color: #fff; /*#395873;*/
   font-family: ".SFNSDisplay-Medium", "Helvetica Neue", sans-serif;
-  font-size: 0.9em;
+  font-size: 2.5em;
+  border-top: 2px dotted white;
 }
 
 .event {
@@ -441,13 +453,13 @@ button, .button {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 1.5em;
+  font-size: 3.5em;
   font-weight: bold;
 }
 
 .event .location {
-  color: #888;
-  font-size: 11px;
+  color: #f9d74d;
+  font-size: 0.5em;
   margin-top: 5px;
 }
 
@@ -463,10 +475,10 @@ button, .button {
 }
 
 .event .time {
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-align: right;
   color: #1A3045;
-  padding-top: 11.5px;
+  padding-top: 50px;
 }
 
 /* slide right animation */

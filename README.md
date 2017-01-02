@@ -1,4 +1,5 @@
 # Events app
+Optimized for 1080x1920 resolution
 
 ### Resources
 * https://github.com/bmathews/menubar-calendar

@@ -141,13 +141,6 @@ class EventList extends React.Component {
         this._renderEvent(e, i, key)
       ));
 
-      // console.log("header = ");
-      // console.log(header);
-      // console.log("els = ");
-      // console.log(els);
-      // console.log("key = ");
-      // console.log(key);
-
       if (!els.length && key.indexOf('Today') === 0) {
         els.push(
           <div className="event empty">No events today!</div>

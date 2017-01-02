@@ -77,7 +77,7 @@ export default class CalendarAPI {
     const data = resp[0];
 
     console.log('CalendarAPI: #syncEvents: Processing list response');
-
+    // console.log(data.items);
     // Group items by action
     data.items.forEach((i) => {
       if (i.status === 'cancelled') {
