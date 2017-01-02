@@ -44,7 +44,8 @@ class CalendarStore {
 
   getByDate(start, end, limit) {
     return new Promise((resolve, reject) => {
-      Events.find({
+      Events
+      .find({
         $or: [{
           'start.dateTime': {
             $gte: start,
@@ -56,7 +57,10 @@ class CalendarStore {
             $lte: end
           }
         }]
-      }).limit(limit).exec((err, res) => {
+      })
+      .sort({ 'start.dateTime': 1 })
+      .limit(limit)
+      .exec((err, res) => {
         if (err) return reject(err);
         return resolve(res);
       });
