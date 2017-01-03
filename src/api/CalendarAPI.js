@@ -26,6 +26,7 @@ export default class CalendarAPI {
       auth: this.oauth.client
     });
     const data = resp[0];
+    // console.log(data);
     return data.items;
   }
 
@@ -45,7 +46,8 @@ export default class CalendarAPI {
       calendarId: CalendarAPI.KEENDOO_CALENDARID,
       maxResults: CalendarAPI.MAX_RESULTS,
       timeZone: 'GMT',
-      singleEvents: true
+      singleEvents: true,
+      orderBy: 'startTime'
     };
 
     if (nextSyncToken) {
@@ -80,6 +82,17 @@ export default class CalendarAPI {
     // console.log(data.items);
     // Group items by action
     data.items.forEach((i) => {
+      // console.log(i.summary + '---' + i.start.date + '---' + i.start.dateTime);
+      if (i.start.date) {
+        i.start.dateTime = i.start.date;
+      }
+      if (i.start.dateTime) {
+        i.start.date = i.start.dateTime;
+        const start = new Date(i.start.date);
+        start.setHours(0);
+        start.setMinutes(0);
+      }
+      // console.log('*******' + i.summary + '---' + i.start.date + '---' + i.start.dateTime);
       if (i.status === 'cancelled') {
         collector.remove.push(i);
       } else {
@@ -107,6 +120,8 @@ export default class CalendarAPI {
       };
     }
 
-    return null;
+    return {
+      items: collector
+    };
   }
 }

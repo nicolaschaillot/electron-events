@@ -58,7 +58,7 @@ class CalendarStore {
           }
         }]
       })
-      .sort({ 'start.dateTime': 1 })
+      //.sort({ 'start.dateTime': 1 })
       .limit(limit)
       .exec((err, res) => {
         if (err) return reject(err);

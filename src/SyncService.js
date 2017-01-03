@@ -35,7 +35,7 @@ export default class extends EventEmitter {
     console.log('Sync: #tick: Now pulling all from store' + " - Start date : " + start.toISOString() + " - End date : " + end.toISOString());
 
     const events = await store.getByDate(start.toISOString(), end.toISOString(), EVENTS_MAX_NUMBER);
-
+    // console.log(events);
     console.log('Sync: #tick: Update done, firing update:', events.length);
 
     this.emit('update', events);

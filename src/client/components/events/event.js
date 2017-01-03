@@ -64,7 +64,7 @@ class Event extends React.Component {
     const start = eventUtils.getEventStartDate(event);
     const end = eventUtils.getEventEndDate(event);
     let timeRange = 'All day';
-    if (!event.start.date) {
+    if (!event.end.date) {
       timeRange = this._getTimeRange(start, end);
     }
 
